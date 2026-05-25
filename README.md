@@ -1,49 +1,131 @@
 # Healthcare Automation Framework
 
-A personal Selenium + Pytest automation framework built using Python, following Page Object Model (POM) design principles.
+A Selenium and Pytest-based healthcare web automation framework built using Python and designed with the Page Object Model (POM) architecture for scalable and maintainable UI testing.
+
+## Overview
+
+This project automates healthcare web application workflows including:
+
+- Login validation
+- UI workflow testing
+- Browser automation
+- Screenshot capture on failure
+- HTML report generation
+
+The framework demonstrates real-world automation testing practices with a focus on modularity, maintainability, and reusable automation components.
+
+---
+
+## Features
+
+### UI Automation
+
+- Automated browser launch and teardown
+- Healthcare web workflow validation
+- Reusable Page Object classes
+- Cross-browser compatible automation
+
+### Reporting
+
+- HTML execution reports
+- Automatic screenshot capture on failure
+- Independent test execution
+
+### Framework Design
+
+- Page Object Model (POM)
+- Reusable Pytest fixtures
+- Modular project structure
+- Centralized browser management
+
+---
 
 ## Tech Stack
+
 - Python
 - Selenium WebDriver
 - Pytest
 - WebDriver Manager
+- Page Object Model (POM)
 - pytest-html
 
-## Project Objective
-To design a scalable and maintainable UI automation framework that demonstrates real-world automation practices such as reusable components, fixtures, reporting, and failure handling.
+---
 
-## Framework Structure
+## Project Structure
+
+```bash
 healthcare-automation-framework/
 │
-├── pages/
-│ └── google_page.py # Page Object classes
-│
-├── tests/
-│ └── test_google.py # Test cases
-│
-├── conftest.py # Pytest fixtures, browser setup, screenshots on failure
-├── reports/ # HTML execution reports
-├── screenshots/ # Screenshots captured on test failure
-├── .gitignore
+├── pages/              # Page Object classes
+├── tests/              # Test cases
+├── conftest.py         # Fixtures and screenshot hooks
+├── reports/            # HTML reports
+├── screenshots/        # Failure screenshots
+└── README.md
+```
 
+---
 
-## Key Features
-- Page Object Model for better code maintainability
-- Centralized WebDriver management using Pytest fixtures
-- Automatic browser setup using WebDriver Manager
-- Screenshots captured automatically on test failure
-- HTML test execution reports generation
+## Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/pavan123chinta/Healthcare-Web-Automation-Testing.git
+cd Healthcare-Web-Automation-Testing
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Run Tests
+
+```bash
+pytest -v
+```
+
+Generate HTML report:
+
+```bash
+pytest -v --html=reports/report.html --self-contained-html
+```
+
+---
 
 ## Sample Test Scenario
+
 - Launch Chrome browser
 - Navigate to Google homepage
 - Validate page title
-- Capture screenshot automatically if test fails
+- Capture screenshot automatically on failure
 
-## How to Run Tests
-```bash
-pytest -v
-Generate HTML Report
-pytest -v --html=reports/report.html --self-contained-html
-Notes
-This framework is created as a personal project to showcase automation testing skills using industry-standard tools and best practices.
+---
+
+## Key Concepts Demonstrated
+
+- Selenium WebDriver automation
+- Pytest framework integration
+- Page Object Model implementation
+- Reusable automation framework design
+- Screenshot handling on failure
+- Automated HTML reporting
+- Modular test architecture
+
+---
+
+## Author
+
+**Pavan Chinta**  
+QA Automation Engineer | Selenium | Pytest | Python
